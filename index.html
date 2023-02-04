@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>h1:40px</h1>
+    <h2>h2:30px</h2>
+    <h3>h3:23.4px</h3>
+    <p>pタグ</p>
+    <hr />
+    <div class="px">
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>pタグ</p>
+    </div>
+    <hr />
+    <div class="vw">
+      <h1>h1</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>pタグ</p>
+    </div>
+    <hr />
+    <div class="calc">
+      <h1>h1</h1>
+      <h1 class="h1">h1/test</h1>
+      <h2>h2</h2>
+      <h3>h3</h3>
+      <p>pタグ</p>
+    </div>
+    <div class="calc-02">
+      <h1>h1</h1>
+      <h1 class="h1-02">h1/test</h1>
+      <hr />
+      ROOT
+      <ul class="hoge">
+        hoge
+        <li class="foo">foo</li>
+        <li class="bar">bar</li>
+      </ul>
+      ROOT
+      <div class="hoge">
+        hoge
+        <div class="foo">foo</div>
+        <div class="bar">bar</div>
+      </div>
+    </div>
+    <style>
+      :root {
+        font-size: calc(8 * ((100vw - 320px) / 1600) + 24px);
+      }
+      .hoge {
+        font-size: 100px;
+      }
+      .foo {
+        font-size: 1em;
+      }
+      .bar {
+        font-size: 1rem;
+      }
+      .px h1 {
+        font-size: 32px;
+      }
+      .px h2 {
+        font-size: 24px;
+      }
+      .px h3 {
+        font-size: 18.72px;
+      }
+      .px p {
+        font-size: 16px;
+      }
+
+      .vw h1 {
+        font-size: clamp(24px, 2vw, 32px);
+      }
+      .vw h2 {
+        font-size: clamp(20px, 1.5vw, 26px);
+      }
+      .vw h3 {
+        font-size: clamp(18px, 1.15vw, 22px);
+      }
+      .vw p {
+        font-size: clamp(16px, 1.05vw, 20px);
+      }
+
+      .calc h1 {
+        font-size: clamp(24px, calc(8 * ((100vw - 320px) / 1600) + 24px), 32px);
+      }
+      .h1 {
+        font-size: 2em;
+      }
+      .calc h2 {
+        font-size: clamp(20px, calc(6 * ((100vw - 320px) / 1600) + 20px), 26px);
+      }
+      .calc h3 {
+        font-size: clamp(18px, calc(4 * ((100vw - 320px) / 1600) + 18px), 22px);
+      }
+      .calc p {
+        font-size: clamp(16px, calc(4 * ((100vw - 320px) / 1600) + 16px), 20px);
+      }
+      .calc-02 h1 {
+        font-size: calc(8 * ((100vw - 320px) / 1600) + 24px);
+      }
+      .h1-02 {
+        font-size: 2em;
+      }
+    </style>
+  </body>
+</html>
